@@ -1,0 +1,92 @@
+➜  vonder-contracts truffle deploy --network bkcTestnet
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+Starting migrations...
+======================
+> Network name:    'bkcTestnet'
+> Network id:      25925
+> Block gas limit: 300000000 (0x11e1a300)
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0xecaf97bea98fc3c80345ee5d6947f0ffb706cc74cacfec7d203dec0a5279bb96
+   > Blocks: 1            Seconds: 4
+   > contract address:    0x58F32771Cad8F28585aF5F4Cd2956A11c0e1a939
+   > block number:        1033165
+   > block timestamp:     1622857239
+   > account:             0x4D2159FF4c2250AfbB839eeB7DD50A94b2Df1A67
+   > balance:             16.89637
+   > gas used:            186963 (0x2da53)
+   > gas price:           50 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00934815 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00934815 ETH
+
+
+2_deploy_token.js
+=================
+
+   Deploying 'VonderToken'
+   -----------------------
+   > transaction hash:    0xe363278ff4f5fa7f8e53b6c07afa32ea4bdae0641a56ecd26e5a37d0dac2b623
+   > Blocks: 1            Seconds: 4
+   > contract address:    0xDE39C96D186986EBc1d08431D603d572ABABE870
+   > block number:        1033167
+   > block timestamp:     1622857249
+   > account:             0x4D2159FF4c2250AfbB839eeB7DD50A94b2Df1A67
+   > balance:             16.7029812
+   > gas used:            3825441 (0x3a5f21)
+   > gas price:           50 gwei
+   > value sent:          0 ETH
+   > total cost:          0.19127205 ETH
+
+VonderToken: 0xDE39C96D186986EBc1d08431D603d572ABABE870
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.19127205 ETH
+
+
+3_deploy_masterchef.js
+======================
+
+   Deploying 'MasterChef'
+   ----------------------
+   > transaction hash:    0xbf483913cdab7d4109e44fd0f4cd6b9609c731be44a729ed62333b495efced74
+   > Blocks: 1            Seconds: 4
+   > contract address:    0x9D27741148db2ca4130aECF6058A894238C94b6a
+   > block number:        1033169
+   > block timestamp:     1622857259
+   > account:             0x4D2159FF4c2250AfbB839eeB7DD50A94b2Df1A67
+   > balance:             16.5636531
+   > gas used:            2759227 (0x2a1a3b)
+   > gas price:           50 gwei
+   > value sent:          0 ETH
+   > total cost:          0.13796135 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.13796135 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.33858155 ETH
