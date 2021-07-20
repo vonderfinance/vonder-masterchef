@@ -1,6 +1,9 @@
-## Contracts
-VonderToken: https://testnet.bkcscan.com/address/0xb167658b19e5BcD3a6106E6C6B73c8c35f1D6bfe/
-MasterChef: https://testnet.bkcscan.com/address/0x45c585A81EDEc7B3F29dE43De5A3bF2265b384Fa/
+## Contracts related to $VON
+VonderToken: https://bkcscan.com/address/0x19dade57B0BBCE7D5E859ba02846820f5c0c2b09/
+
+MasterChef: https://bkcscan.com/address/0x60326f6Ad05adeE2ffD42B0c05c68Ead535B104E/
+
+KKUB: https://bkcscan.com/address/0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5
 
 KUSDT: https://bkcscan.com/address/0x80318CAB3791E49650C8760a61196fFD2D23F6a1/contracts
 
