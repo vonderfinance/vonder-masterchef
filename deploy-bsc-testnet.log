@@ -1,21 +1,6 @@
 Compiling your contracts...
 ===========================
-> Compiling ./contracts/MasterChef.sol
-> Compiling ./contracts/Migrations.sol
-> Compiling ./contracts/VonderToken.sol
-> Compilation warnings encountered:
-
-    /Users/tor/onedee/crypto/vonder/vonder-masterchef/contracts/Migrations.sol: Warning: SPDX license identifier not provided in source file. Before publishing, consider adding a comment containing "SPDX-License-Identifier: <SPDX-License>" to each source file. Use "SPDX-License-Identifier: UNLICENSED" for non-open-source code. Please see https://spdx.org for more information.
-,/Users/tor/onedee/crypto/vonder/vonder-masterchef/contracts/VonderToken.sol:701:5: Warning: Documentation tag on non-public state variables will be disallowed in 0.7.0. You will need to use the @dev tag explicitly.
-    /// @notice A record of each accounts delegate
-    ^--------------------------------------------^
-,/Users/tor/onedee/crypto/vonder/vonder-masterchef/contracts/MasterChef.sol:343:5: Warning: Function state mutability can be restricted to pure
-    function getMultiplier(uint256 _from, uint256 _to) public view returns (uint256) {
-    ^ (Relevant source part starts here and spans across multiple lines).
-
-> Artifacts written to /Users/tor/onedee/crypto/vonder/vonder-masterchef/build/contracts
-> Compiled successfully using:
-   - solc: 0.6.12+commit.27d51765.Emscripten.clang
+> Everything is up to date, there is nothing to compile.
 
 
 
@@ -23,7 +8,7 @@ Starting migrations...
 ======================
 > Network name:    'binanceTestnet'
 > Network id:      97
-> Block gas limit: 29882814 (0x1c7f9be)
+> Block gas limit: 29999542 (0x1c9c1b6)
 
 
 1_initial_migration.js
@@ -31,13 +16,13 @@ Starting migrations...
 
    Deploying 'Migrations'
    ----------------------
-   > transaction hash:    0x0b4ab72906ee93b0101116e6442d9f32a4f33f1b6a13351850219ca6f86748ff
-   > Blocks: 3            Seconds: 8
-   > contract address:    0xf0e5114400CB88714925b5204816B37EAA13d9A2
-   > block number:        10753214
-   > block timestamp:     1626774807
+   > transaction hash:    0x998edd8f2b496f19f07f1e90bbc83ab3edb6e9beb9ec508e3a26a2c6dc47ef52
+   > Blocks: 1            Seconds: 4
+   > contract address:    0x1d96c52B1A4e9Ad0ebA5aBc0d44Ac69dd31A418f
+   > block number:        10922103
+   > block timestamp:     1627286151
    > account:             0xC2F33fFC6b0C933fE084966e1da651A8f6D6216A
-   > balance:             0.91426668
+   > balance:             0.73238863
    > gas used:            153706 (0x2586a)
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -55,24 +40,24 @@ Starting migrations...
 
    Deploying 'VonderToken'
    -----------------------
-   > transaction hash:    0xe001b9a0fa22172dbeb48d80e2a7f549eae2c8e71e7d5b92698ec02276bed8fe
-   > Blocks: 1            Seconds: 4
-   > contract address:    0x4c3AedECa40e3152C94cb8609018D737AEc910e9
-   > block number:        10753220
-   > block timestamp:     1626774825
+   > transaction hash:    0x306712004a5f3130092bd321d99df9f83c4fd5b6bece5757328bd0d83c68e1b0
+   > Blocks: 3            Seconds: 8
+   > contract address:    0xEEeAe999fe84752F51967C60E854908842090ae5
+   > block number:        10922109
+   > block timestamp:     1627286169
    > account:             0xC2F33fFC6b0C933fE084966e1da651A8f6D6216A
-   > balance:             0.89200655
-   > gas used:            2183758 (0x21524e)
+   > balance:             0.71012806
+   > gas used:            2183802 (0x21527a)
    > gas price:           10 gwei
    > value sent:          0 ETH
-   > total cost:          0.02183758 ETH
+   > total cost:          0.02183802 ETH
 
-Vonder Address: 0x4c3AedECa40e3152C94cb8609018D737AEc910e9
+Vonder Address: 0xEEeAe999fe84752F51967C60E854908842090ae5
 
    > Saving migration to chain.
    > Saving artifacts
    -------------------------------------
-   > Total cost:          0.02183758 ETH
+   > Total cost:          0.02183802 ETH
 
 
 3_master_chef.js
@@ -80,13 +65,13 @@ Vonder Address: 0x4c3AedECa40e3152C94cb8609018D737AEc910e9
 
    Deploying 'MasterChef'
    ----------------------
-   > transaction hash:    0x26987008d2dfed2ed47d3d472666c4c64bfc2f9ed63ddfcd51731396c491cf25
-   > Blocks: 2            Seconds: 4
-   > contract address:    0x90A46Eec11852fff527b1da7e1Db9B238B86F385
-   > block number:        10753228
-   > block timestamp:     1626774849
+   > transaction hash:    0xf48fd3168f6339610ff9a4fa0fb8d0598bd666d53ba3f76ce4497edd1fbd93d6
+   > Blocks: 3            Seconds: 8
+   > contract address:    0xeEC9391F96F2ad38ED9C485A1D41AF750cf42d46
+   > block number:        10922116
+   > block timestamp:     1627286190
    > account:             0xC2F33fFC6b0C933fE084966e1da651A8f6D6216A
-   > balance:             0.8739786
+   > balance:             0.69210011
    > gas used:            1775540 (0x1b17b4)
    > gas price:           10 gwei
    > value sent:          0 ETH
@@ -102,4 +87,4 @@ Vonder Address: 0x4c3AedECa40e3152C94cb8609018D737AEc910e9
 Summary
 =======
 > Total deployments:   3
-> Final cost:          0.04113004 ETH
+> Final cost:          0.04113048 ETH
