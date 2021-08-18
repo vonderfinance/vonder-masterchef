@@ -396,7 +396,7 @@ contract MasterChef is Ownable {
                 safeVonTransfer(msg.sender, pending);
             }
         }
-        if(_amount > 0) {
+        if(_amount.add(pool.depositFeeBP) > 0) {
             pool.lpToken.safeTransferFrom(address(msg.sender), address(this), _amount);
             if(pool.depositFeeBP > 0){
                 uint256 depositFee = _amount.mul(pool.depositFeeBP).div(10000);
