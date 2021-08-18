@@ -545,8 +545,15 @@ contract BEP20 is Context, IBEP20, Ownable {
 
 // VonderToken without Governance.
 contract VonderToken is BEP20('Extended VONDER Token', 'xVON') {
+    uint256 private _cap = 101051200e18; //101,051,200
+
+    function cap() public view returns (uint256) {
+        return _cap;
+    }
+
     // @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterChef).
     function mint(address _to, uint256 _amount) public onlyOwner {
+        require(totalSupply().add(_amount) <= cap(), "cap exceeded");
         _mint(_to, _amount);
         // _moveDelegates(address(0), _delegates[_to], _amount);
     }
