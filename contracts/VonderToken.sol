@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.6;
 
-import './SafeMath.sol';
+import './libs/SafeMath.sol';
 
 /*
  * @dev Provides information about the current execution context, including the
@@ -545,5 +545,9 @@ contract BEP20 is Context, IBEP20, Ownable {
 
 // VonderToken without Governance.
 contract VonderToken is BEP20('Extended VONDER Token', 'xVON') {
-    
+    // @notice Creates `_amount` token to `_to`. Must only be called by the owner (MasterChef).
+    function mint(address _to, uint256 _amount) public onlyOwner {
+        _mint(_to, _amount);
+        // _moveDelegates(address(0), _delegates[_to], _amount);
+    }
 }

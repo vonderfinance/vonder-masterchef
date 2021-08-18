@@ -9,6 +9,5 @@ contract MockBEP20 is BEP20 {
         uint256 supply
     ) public BEP20(name, symbol) {
         _mint(msg.sender, supply);
-
     }
 }
