@@ -1,0 +1,74 @@
+{
+    "name": "VONDER Default List",
+    "timestamp": "2021-07-16T09:56:23Z",
+    "version":
+    {
+        "major": 1,
+        "minor": 7,
+        "patch": 0
+    },
+    "tags":
+    {},
+    "logoURI": "https://app.vonder.finance/images/vonder-token.svg",
+    "keywords": [
+        "vonder",
+        "default"
+    ],
+    "tokens": [
+    {
+        "name": "VONDER Token",
+        "symbol": "VON",
+        "address": "0x19dade57B0BBCE7D5E859ba02846820f5c0c2b09",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://exchange.vonder.finance/images/coins/VON.png"
+    },
+    {
+        "name": "MVP",
+        "symbol": "MVP",
+        "address": "0xDD7847deD760a8e7FB882B4A9B0e990323415ed9",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://exchange.vonder.finance/images/coins/MVP.svg"
+    },
+    {
+        "name": "TukTuk Token",
+        "symbol": "TUK",
+        "address": "0xAAD64d9b17f86b3ba803369b0d59392b3744ab13",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://exchange.tuktuk.finance/images/coins/TUK.png"
+    },
+    {
+        "name": "KillSwitch-Peg UST Token",
+        "symbol": "kUST",
+        "address": "0x2920712a36270ba6C48a3D23998D6CFbbe0A677B",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://assets.trustwalletapp.com/blockchains/smartchain/assets/0x23396cF899Ca06c4472205fC903bDB4de249D6fC/logo.png"
+    },
+    {
+        "name": "KillSwitch-Peg DAI Token",
+        "symbol": "kDAI",
+        "address": "0xED7B8606270295d1b3b60b99c051de4D7D2f7ff2",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x6B175474E89094C44Da98b954EedeAC495271d0F/logo.png"
+    },
+    {
+        "name": "Officially Wrapped KUB",
+        "symbol": "KKUB",
+        "address": "0x67eBD850304c70d983B2d1b93ea79c7CD6c3F6b5",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://exchange.vonder.finance/images/coins/KUB.png"
+    },
+    {
+        "name": "Loremboard Finance",
+        "symbol": "kLorem",
+        "address": "0x42A7ECC6D2D2780C2C2daAa8F7f2d2C2557e276b",
+        "chainId": 96,
+        "decimals": 18,
+        "logoURI": "https://v2.loremboard.finance/assets/images/icons/lorem-coin.png"
+    }]
+}
