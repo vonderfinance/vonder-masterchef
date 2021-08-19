@@ -9,15 +9,15 @@ const binanceProvider = new HDWalletProvider({
     providerOrUrl: `https://data-seed-prebsc-1-s1.binance.org:8545`
 });
 
-// const bitkubMainnetProvider = new HDWalletProvider({
-//     privateKeys: mainnetBkcPrivateKeys,
-//     providerOrUrl: `https://rpc.bitkubchain.io`
-// });
+const bitkubMainnetProvider = new HDWalletProvider({
+    privateKeys: mainnetBkcPrivateKeys,
+    providerOrUrl: `https://rpc.bitkubchain.io`
+});
 
-// const bitkubTestnetProvider = new HDWalletProvider({
-//     privateKeys: testnetBkcPrivateKeys,
-//     providerOrUrl: `https://rpc-testnet.bitkubchain.io`
-// });
+const bitkubTestnetProvider = new HDWalletProvider({
+    privateKeys: testnetBkcPrivateKeys,
+    providerOrUrl: `https://rpc-testnet.bitkubchain.io`
+});
 
 module.exports = {
     // Uncommenting the defaults below
@@ -44,20 +44,20 @@ module.exports = {
             gasPrice: Web3.utils.toWei('10', 'gwei'),
             skipDryRun: true,
         },
-        // bkcMainnet: {
-        //     provider: () => bitkubMainnetProvider,
-        //     network_id: '96',
-        //     gas: 5500000,
-        //     gasPrice: Web3.utils.toWei('50', 'gwei'),
-        //     skipDryRun: true,
-        // },
-        // bkcTestnet: {
-        //     provider: () => bitkubTestnetProvider,
-        //     network_id: '25925',
-        //     gas: 5500000,
-        //     gasPrice: Web3.utils.toWei('50', 'gwei'),
-        //     skipDryRun: true,
-        // },
+        bkcMainnet: {
+            provider: () => bitkubMainnetProvider,
+            network_id: '96',
+            gas: 5500000,
+            gasPrice: Web3.utils.toWei('50', 'gwei'),
+            skipDryRun: true,
+        },
+        bkcTestnet: {
+            provider: () => bitkubTestnetProvider,
+            network_id: '25925',
+            gas: 5500000,
+            gasPrice: Web3.utils.toWei('50', 'gwei'),
+            skipDryRun: true,
+        },
     },
     //
     compilers: {
