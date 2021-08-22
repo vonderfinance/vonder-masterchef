@@ -119,4 +119,73 @@ contract Timelock {
         // solium-disable-next-line security/no-block-members
         return block.timestamp;
     }
+
+  struct UserInfo {
+        uint256 amount;
+        int256 rewardDebt;
+    }
+    function add(uint256 allocPoint, IERC20 _lpToken, IRewarder _rewarder) public onlyOwner {
+        uint256 lastRewardBlock = block.number;
+        totalAllocPoint = totalAllocPoint.add(allocPoint);
+        lpToken.push(_lpToken);
+        rewarder.push(_rewarder);
+
+        poolInfo.push(PoolInfo({
+            allocPoint: allocPoint.to64(),
+            lastRewardBlock: lastRewardBlock.to64(),
+            accSushiPerShare: 0
+        }));
+        emit LogPoolAddition(lpToken.length.sub(1), allocPoint, _lpToken, _rewarder);
+    }
+    
+     function updatePool(uint256 pid) public returns (PoolInfo memory pool) {
+        pool = poolInfo[pid];
+        if (block.number > pool.lastRewardBlock) {
+            uint256 lpSupply = lpToken[pid].balanceOf(address(this));
+            if (lpSupply > 0) {
+                uint256 blocks = block.number.sub(pool.lastRewardBlock);
+                uint256 sushiReward = blocks.mul(sushiPerBlock()).mul(pool.allocPoint) / totalAllocPoint;
+                pool.accSushiPerShare = pool.accSushiPerShare.add((sushiReward.mul(ACC_SUSHI_PRECISION) / lpSupply).to128());
+            }
+            pool.lastRewardBlock = block.number.to64();
+            poolInfo[pid] = pool;
+            emit LogUpdatePool(pid, pool.lastRewardBlock, lpSupply, pool.accSushiPerShare);
+        }
+    }
+
+    function getBlockTimestamp() internal view returns (uint) {
+        // solium-disable-next-line security/no-block-members
+        return block.timestamp;
+    }
+
+
+//BSC TEST info of each pool.
+struct PoolInfo {
+    IBEP20 lpToken;  //Address of LP Token
+    uint256 allocPoint; //Allocation points assigned to this pool
+    uint256 lastRewardBlock; // Last block number that Von distribution occures
+    uint256 accVonPerShare; //Accumulated Von per share, time 1e12.
+    int64 lastRewardBlock;
+    uint16 depositFeeBp; // Deposit fee in basis point
+    
+}
+   function emergencyWithdraw(uint256 pid, address to) public {
+        UserInfo storage user = userInfo[pid][msg.sender];
+        uint256 amount = user.amount;
+        user.amount = 0;
+        user.rewardDebt = 0;
+
+        IRewarder _rewarder = rewarder[pid];
+        if (address(_rewarder) != address(0)) {
+            _rewarder.onSushiReward(pid, msg.sender, to, 0, 0);
+        }
+
+        // Note: transfer can fail or succeed if `amount` is zero.
+        lpToken[pid].safeTransfer(to, amount);
+        emit EmergencyWithdraw(msg.sender, pid, amount, to);
+    }
+
+      function getBlockTimeStamp() internal view return(uin) {
+        return block.timestamp;
+   }
 }
