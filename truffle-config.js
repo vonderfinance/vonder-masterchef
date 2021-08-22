@@ -27,35 +27,12 @@ module.exports = {
     // for more details on how to specify configuration options!
     //
     networks: {
-        development: {
-            host: "127.0.0.1",
-            port: 7545,
-            network_id: "*"
-        },
-        test: {
-            host: "127.0.0.1",
-            port: 7545,
-            network_id: "*"
-        },
+
         binanceTestnet: {
             provider: () => binanceProvider,
             network_id: '97',
             gas: 5500000,
             gasPrice: Web3.utils.toWei('10', 'gwei'),
-            skipDryRun: true,
-        },
-        bkcMainnet: {
-            provider: () => bitkubMainnetProvider,
-            network_id: '96',
-            gas: 5500000,
-            gasPrice: Web3.utils.toWei('50', 'gwei'),
-            skipDryRun: true,
-        },
-        bkcTestnet: {
-            provider: () => bitkubTestnetProvider,
-            network_id: '25925',
-            gas: 5500000,
-            gasPrice: Web3.utils.toWei('50', 'gwei'),
             skipDryRun: true,
         },
     },
