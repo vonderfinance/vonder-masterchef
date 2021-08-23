@@ -4,7 +4,12 @@ const fs = require('fs');
 
 const { infuraProjectId, mainnetBkcPrivateKeys, testnetBkcPrivateKeys, mainnetPrivateKeys, privateKeys, etherApiKey, bscApiKey } = JSON.parse(fs.readFileSync('.secret').toString().trim());
 
-const binanceProvider = new HDWalletProvider({
+const binanceMainnetProvider = new HDWalletProvider({
+    privateKeys: privateKeys,
+    providerOrUrl: `https://bsc-dataseed1.defibit.io`
+});
+
+const binanceTestnetProvider = new HDWalletProvider({
     privateKeys: privateKeys,
     providerOrUrl: `https://data-seed-prebsc-1-s1.binance.org:8545`
 });
@@ -37,8 +42,15 @@ module.exports = {
             port: 7545,
             network_id: "*"
         },
-        binanceTestnet: {
-            provider: () => binanceProvider,
+        bscMainnet: {
+            provider: () => binanceMainnetProvider,
+            network_id: '56',
+            gas: 5500000,
+            gasPrice: Web3.utils.toWei('10', 'gwei'),
+            skipDryRun: true,
+        },
+        bscTestnet: {
+            provider: () => binanceTestnetProvider,
             network_id: '97',
             gas: 5500000,
             gasPrice: Web3.utils.toWei('10', 'gwei'),
@@ -55,7 +67,7 @@ module.exports = {
             provider: () => bitkubTestnetProvider,
             network_id: '25925',
             gas: 5500000,
-            gasPrice: Web3.utils.toWei('50', 'gwei'),
+            gasPrice: Web3.utils.toWei('5', 'gwei'),
             skipDryRun: true,
         },
     },
