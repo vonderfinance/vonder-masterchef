@@ -1,0 +1,24 @@
+ ~/Desktop/Uniswap/von/vonder-masterchef/hardhat/ [master*] npx hardhat verify --network kovan 0xf61B75F1F67F70D0DC52fA5860b75B2f1Ca07de1Nothing to compile
+Compiling 1 file with 0.7.3
+Successfully submitted source code for contract
+contracts/PetGameNFT.sol:PetGameNFT at 0xf61B75F1F67F70D0DC52fA5860b75B2f1Ca07de1
+for verification on Etherscan. Waiting for verification result...
+
+Successfully verified contract PetGameNFT on Etherscan.
+https://kovan.etherscan.io/address/0xf61B75F1F67F70D0DC52fA5860b75B2f1Ca07de1#code
+
+#befor run verify please check apiKey go edit config flie same below
+etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: `${bscApiKey}`
+  },
+npx hardhat verify --network bsctestnet 0x690bDEE91C8755520120b0229c1C1dd398cDC74D
+Nothing to compile
+Compiling 1 file with 0.7.3
+Successfully submitted source code for contract
+contracts/PetGameNFT.sol:PetGameNFT at 0x690bDEE91C8755520120b0229c1C1dd398cDC74D
+for verification on Etherscan. Waiting for verification result...
+
+Successfully verified contract PetGameNFT on Etherscan.
+https://testnet.bscscan.com/address/0x690bDEE91C8755520120b0229c1C1dd398cDC74D#code

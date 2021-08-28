@@ -7,7 +7,7 @@
 
 
 pragma solidity ^0.7.0;
-
+import "hardhat/console.sol";
 /**
  * @dev Wrappers over Solidity's arithmetic operations with added overflow
  * checks.
@@ -463,7 +463,7 @@ contract HasForeignAsset is Ownable {
 }
 
 
-contract PETGAMES is IBEP20, HasForeignAsset {
+contract PetGameNFT is IBEP20, HasForeignAsset {
    
     using SafeMath for uint256;
     using Address for address;
@@ -479,10 +479,10 @@ contract PETGAMES is IBEP20, HasForeignAsset {
     uint8 private _decimals;
 
     constructor () {
-        _name = "PET GAMES BETA";
-        _symbol = "PETG";
+        _name = "Pet Game NFT";
+        _symbol = "PGNFT";
         _decimals = 18;
-        uint256 _maxSupply = 1250000000;
+        uint256 _maxSupply = 12500000000;
         _mintOnce(msg.sender, _maxSupply.mul(10 ** _decimals));
     }
 

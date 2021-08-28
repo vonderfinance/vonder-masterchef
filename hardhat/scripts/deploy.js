@@ -23,14 +23,10 @@ async function main() {
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
   const Token = await ethers.getContractFactory("Token");
-  const PetGameNFT = await ethers.getContractFactory("PetGameNFT")
-  const petgemenft = await PetGameNFT.deploy();
   const token = await Token.deploy();
   await token.deployed();
-  await petgemenft.deployed();
 
   console.log("Token address:", token.address);
-  console.log("PetGameNFT is", petgemenft.address);
 
   // We also save the contract's artifacts and address in the frontend directory
   saveFrontendFiles(token);
