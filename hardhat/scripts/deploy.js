@@ -1,12 +1,15 @@
 // This is a script for deploying your contracts. You can adapt it to deploy
+
+const { ethers } = require("hardhat");
+
 // yours, or create new ones.
 async function main() {
   // This is just a convenience check
   if (network.name === "hardhat") {
     console.warn(
       "You are trying to deploy a contract to the Hardhat Network, which" +
-        "gets automatically created and destroyed every time. Use the Hardhat" +
-        " option '--network localhost'"
+      "gets automatically created and destroyed every time. Use the Hardhat" +
+      " option '--network localhost'"
     );
   }
 
@@ -20,10 +23,14 @@ async function main() {
   console.log("Account balance:", (await deployer.getBalance()).toString());
 
   const Token = await ethers.getContractFactory("Token");
+  const PetGameNFT = await ethers.getContractFactory("PetGameNFT")
+  const petgemenft = await PetGameNFT.deploy();
   const token = await Token.deploy();
   await token.deployed();
+  await petgemenft.deployed();
 
   console.log("Token address:", token.address);
+  console.log("PetGameNFT is", petgemenft.address);
 
   // We also save the contract's artifacts and address in the frontend directory
   saveFrontendFiles(token);
