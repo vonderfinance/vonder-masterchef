@@ -9,15 +9,7 @@ const binanceProvider = new HDWalletProvider({
     providerOrUrl: `https://data-seed-prebsc-1-s1.binance.org:8545`
 });
 
-const bitkubMainnetProvider = new HDWalletProvider({
-    privateKeys: mainnetBkcPrivateKeys,
-    providerOrUrl: `https://rpc.bitkubchain.io`
-});
 
-const bitkubTestnetProvider = new HDWalletProvider({
-    privateKeys: testnetBkcPrivateKeys,
-    providerOrUrl: `https://rpc-testnet.bitkubchain.io`
-});
 
 module.exports = {
     // Uncommenting the defaults below
