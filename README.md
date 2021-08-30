@@ -1,3 +1,25 @@
+<<<<<<< HEAD
+# initial-farm-offering
+
+[![Actions Status](https://github.com/pancakeswap/inital-farm-offering/workflows/CI/badge.svg)](https://github.com/pancakeswap/inital-farm-offering/actions)
+
+
+# Local Development
+
+The following assumes the use of `node@>=12`.
+
+## Install Dependencies
+
+`yarn`
+
+## Compile Contracts
+
+`yarn compile`
+
+## Run Tests
+
+`yarn test`
+=======
 ## Contracts related to $VON
 VonderToken: https://bkcscan.com/address/0x19dade57B0BBCE7D5E859ba02846820f5c0c2b09/contracts
 
@@ -14,3 +36,4 @@ KDAI: https://bkcscan.com/address/0xc6677E014D7e2F45fB44E8036C014B916C0492a1/con
 KBTC: https://bkcscan.com/address/0x0330b553823703E673787747D1930a12D7a14c94/contracts
 
 KETH: https://bkcscan.com/address/0xE06B321eF826eaB4D242b1e40d4a51b8dCDF61B2/contracts
+>>>>>>> 378f1a33f6211942b485fdca018c87e456581f23

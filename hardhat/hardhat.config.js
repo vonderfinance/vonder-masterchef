@@ -55,7 +55,7 @@ module.exports = {
         }
       },
       {
-        version: "0.8.0",   // for custom oracle and openzeppling
+        version: "0.8.0",   // for custom oracle and openzeppelin
         settings: {
           optimizer: {
             enabled: true,
@@ -64,6 +64,17 @@ module.exports = {
         },
       },
     ],
+    overrides: {
+      "contracts/VonderToken.sol": {
+        version: "0.6.6",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 20000,
+          }
+        }
+      }
+    }
   },
   paths: {
     sources: "./contracts",

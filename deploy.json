@@ -1,0 +1,42 @@
+ ~/Desktop/Uniswap/IFO/initial-farm-offering/ [master*] truffle deploy -f 2 --to 2 --network bitkubMainnet
+
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+
+Starting migrations...
+======================
+> Network name:    'bitkubMainnet'
+> Network id:      96
+> Block gas limit: 60000000 (0x3938700)
+
+
+2_deploy_ifo.js
+===============
+
+   Deploying 'IFO'
+   ---------------
+   > transaction hash:    0xc8b90e06c0ff898d3aa1e34bc4bd0c96721870ac681a9b7b84cb52e5ea31a07d
+   > Blocks: 0            Seconds: 0
+   > contract address:    0xE278848Faa198eB4F302553A4A39F0860D750c70
+   > block number:        1927104
+   > block timestamp:     1630076463
+   > account:             0x01A70c172c7F15c74975DD57771FA0dFC7507A52
+   > balance:             0.984455165
+   > gas used:            1192969 (0x123409)
+   > gas price:           5 gwei
+   > value sent:          0 ETH
+   > total cost:          0.005964845 ETH
+
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:         0.005964845 ETH
+
+
+Summary
+=======
+> Total deployments:   1
+> Final cost:          0.005964845 ETH
+
