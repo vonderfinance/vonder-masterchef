@@ -43,5 +43,38 @@ module.exports = {
       }
     }
   },
-  solidity: "0.7.3"
+  solidity: {
+    compilers: [
+      {
+        version: "0.7.0",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 200000,
+          }
+        }
+      },
+      {
+        version: "0.8.0",   // for custom oracle and openzeppling
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 20000,
+          }
+        },
+      },
+    ],
+  },
+  paths: {
+    sources: "./contracts",
+    tests: "./test",
+    cache: "./cache",
+    artifacts: "./artifacts",
+    deploy: "./deploy",
+    deployments: "./deployments",
+    imports: "./imports",
+  },
+  mocha: {
+    timeout: 20000,
+  },
 };
