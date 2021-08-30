@@ -10,7 +10,7 @@ coverage
 coverage.json
 
 .secret
-/migrations/
+
 /flattened/
 
 deploy.log
